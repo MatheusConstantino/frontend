@@ -1,0 +1,15 @@
+version: "3.5"
+
+volumes:
+  node-modules:
+
+services:
+  web:
+    build: .
+    working_dir: /app
+    command: bash -c "yarn install && yarn run dev"
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+      - node-modules:/app/node_modules
