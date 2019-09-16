@@ -28,3 +28,13 @@
     </v-content>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    login() {
+      // Add req to backend here
+    },
+  },
+};
+</script>
