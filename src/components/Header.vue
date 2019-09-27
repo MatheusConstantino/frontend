@@ -7,6 +7,5 @@
       </center>
     </div>
     </center>
-    <span class="font-weight-light">Alfa</span> -->
   </v-toolbar-title>
 </template>
