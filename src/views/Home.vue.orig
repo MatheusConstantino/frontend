@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1 class="title">{{this.companyName}}</h1>
+<<<<<<< HEAD
     <center>
      <div  style="align-content:center; margin-bottom:2%">
       <b>Capital: </b><button>R$ 40.000,00</button> | <b>Locação: </b><button>70%</button>
@@ -19,7 +20,10 @@
     <div class="city">
       <img src="../assets/img/Cidade.png" style="width:30%;height:30%;"/>
     </div>
+=======
+>>>>>>> edb2dac94ea30d203ea43cc8f9241f40ea589d5f
   </div>
+
 </template>
 
 <script>
@@ -79,3 +83,5 @@ export default {
 }
 
 </style>
+
+
