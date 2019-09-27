@@ -1,10 +1,6 @@
 <template>
   <div class="home">
     <h1 class="title">{{this.companyName}}</h1>
-    <center>
-      <h3>saldo</h3>
-      <h3>armazem</h3>
-    </center>
   </div>
 </template>
 
