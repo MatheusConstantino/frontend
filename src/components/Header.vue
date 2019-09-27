@@ -7,7 +7,6 @@
       </center>
     </div>
     </center>
-    <!--<span>Integrador - </span>
     <span class="font-weight-light">Alfa</span> -->
   </v-toolbar-title>
 </template>
