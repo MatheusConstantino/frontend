@@ -51,6 +51,12 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+const request = axios.create({
+  baseURL: 'http://localhost:8000',
+});
+
 export default {
   data() {
     return {
@@ -63,7 +69,19 @@ export default {
     };
   },
   methods: {
-    insertCompany() {},
+    insertCompany() {
+      const params = {
+        name: this.name,
+        name_justification: this.justification,
+        mission: this.mission,
+        vision: this.vision,
+        values: this.values,
+        logo_url: this.logoUrl,
+      };
+
+      request.post('/companies/new', params);
+      location.reload();
+    },
   },
 };
 </script>

@@ -26,7 +26,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="primary" @click="inserUser">Cadastrar</v-btn>
+              <v-btn color="primary" @click="insertUser">Cadastrar</v-btn>
             </v-card-actions>
           </v-flex>
         </v-layout>
@@ -36,15 +36,25 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+const request = axios.create({
+  baseURL: 'http://localhost:8000',
+});
+
 export default {
   data() {
     return {
       email: '',
       password: '',
+      name: '',
     };
   },
   methods: {
-    inserUser() {},
+    insertUser() {
+      request.post('/users/new', { name: this.name, email: this.email, password: this.password });
+      location.reload();
+    },
   },
 };
 </script>
