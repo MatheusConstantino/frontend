@@ -13,9 +13,9 @@
                   type="text"
                 ></v-text-field>
                 <v-text-field
-                  v-model="email"
-                  label="Email"
-                  type="email"
+                  v-model="login"
+                  label="Login"
+                  type="text"
                 ></v-text-field>
                 <v-text-field
                   v-model="password"
@@ -39,21 +39,21 @@
 import axios from 'axios';
 
 const request = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'http://appdorodri.heroku.app',
 });
 
 export default {
   data() {
     return {
-      email: '',
+      login: '',
       password: '',
       name: '',
     };
   },
   methods: {
     insertUser() {
-      request.post('/users/new', { name: this.name, email: this.email, password: this.password });
-      location.reload();
+      request.post('/users/new', { name: this.name, email: this.login, password: this.password });
+      window.location.href = 'http://localhost:8080/';
     },
   },
 };

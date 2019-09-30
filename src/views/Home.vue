@@ -10,10 +10,9 @@
     </div>
     <center>
       <div class="btn-group">
-        <button>Produto</button>
-        <button>Armazém</button>
-        <button>Other options</button>
-      </div> 
+        <v-btn color="primary" @click="goToUser">Cadastrar Usuário</v-btn>
+        <v-btn color="primary" @click="goToCompany">Cadastrar Empresa</v-btn>
+      </div>
     </center>
 
     <div class="city">
@@ -30,7 +29,12 @@ export default {
     };
   },
   methods: {
-    inserUser() {},
+    goToCompany() {
+      window.location.href = 'http://localhost:8080/companies/new';
+    },
+    goToUser() {
+      window.location.href = 'http://localhost:8080/users/new';
+    },
   },
 };
 </script>
@@ -44,14 +48,14 @@ export default {
 }
 
   .btn-group button {
-  background-color: #468CCB; 
-  border: 1px solid #4684B2; 
-  color: white; 
+  background-color: #468CCB;
+  border: 1px solid #4684B2;
+  color: white;
   padding: 10px 24px;
   margin-top: 10px;
-  cursor: pointer; 
-  width: 20%; 
-  display: block; 
+  cursor: pointer;
+  width: 20%;
+  display: block;
   border-radius: 30px;
 }
 
@@ -60,15 +64,15 @@ export default {
 }
 
   .btn-group-side button {
-  background-color: #468CCB; 
-  border: 1px solid #4684B2; 
-  color: white; 
+  background-color: #468CCB;
+  border: 1px solid #4684B2;
+  color: white;
   margin-top: 2%;
   padding: 10px 24px;
-  cursor: pointer; 
-  width: 15%; 
+  cursor: pointer;
+  width: 15%;
   border-radius: 10px;
- 
+
   border-radius: 30px;
 }
 

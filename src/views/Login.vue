@@ -33,7 +33,7 @@
 export default {
   methods: {
     login() {
-      // Add req to backend here
+      window.location.href = 'http://localhost:8080/';
     },
   },
 };

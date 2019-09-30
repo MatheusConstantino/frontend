@@ -80,7 +80,7 @@ export default {
       };
 
       request.post('/companies/new', params);
-      location.reload();
+      window.location.href = 'http://localhost:8080/';
     },
   },
 };
